@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace ApiProject.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]/[action]")]
     public class GenerosController : ControllerBase
     {
         private readonly ApiProjectContext _context;

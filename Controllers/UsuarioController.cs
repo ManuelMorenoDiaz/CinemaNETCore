@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 namespace ApiProject.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]/[action]")]
     public class UsuariosController : ControllerBase
     {
         private readonly ApiProjectContext _context;

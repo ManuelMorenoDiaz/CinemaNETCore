@@ -5,7 +5,7 @@ using ApiProject.Controllers;
 namespace ApiProject.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]/[action]")]
     public class PeliculasController : ControllerBase
     {
         private readonly ApiProjectContext _context;
