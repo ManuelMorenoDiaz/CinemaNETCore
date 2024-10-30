@@ -17,5 +17,5 @@ public class Serie
     public int ID_Género { get; set; } // FK
 
     // Navegación hacia el género
-    public virtual Genero Genero { get; set; } // No es necesario marcarlo como required aquí
+    // public virtual required Genero Genero { get; set; } // No es necesario marcarlo como required aquí
 }

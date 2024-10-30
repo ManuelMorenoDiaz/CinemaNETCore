@@ -5,14 +5,14 @@ public class Actor
     public DateTime? Fecha_Nacimiento { get; set; }
     public string? Biografía { get; set; }
 
-    // Colección de películas en las que ha actuado
-    public virtual ICollection<ActorPelicula> ActorPeliculas { get; set; } = new List<ActorPelicula>();
-    
-    // Colección de series en las que ha actuado
-    public virtual ICollection<ActorSerie> ActorSeries { get; set; } = new List<ActorSerie>();
+    // // Colección de películas en las que ha actuado
+    // public virtual ICollection<ActorPelicula> ActorPeliculas { get; set; } = new List<ActorPelicula>();
+
+    // // Colección de series en las que ha actuado
+    // public virtual ICollection<ActorSerie> ActorSeries { get; set; } = new List<ActorSerie>();
 }
 
-public class ActorPelicula 
+public class ActorPelicula
 {
     public int ID_Actor { get; set; }
     public int ID_Pelicula { get; set; }
@@ -21,11 +21,11 @@ public class ActorPelicula
     public string? Rol { get; set; }
 
     // Navegaciones hacia Actor y Película
-    public virtual Actor Actor { get; set; } // Cambiado a virtual
-    public virtual Pelicula Pelicula { get; set; } // Cambiado a virtual
+    // public virtual required Actor Actor { get; set; } // Cambiado a virtual
+    // public virtual required Pelicula Pelicula { get; set; } // Cambiado a virtual
 }
 
-public class ActorSerie 
+public class ActorSerie
 {
     public int ID_Actor { get; set; }
     public int ID_Serie { get; set; }
@@ -34,6 +34,6 @@ public class ActorSerie
     public string? Rol { get; set; }
 
     // Navegaciones hacia Actor y Serie
-    public virtual Actor Actor { get; set; } // Cambiado a virtual
-    public virtual Serie Serie { get; set; } // Cambiado a virtual
+    // public virtual required Actor Actor { get; set; } // Cambiado a virtual
+    // public virtual required Serie Serie { get; set; } // Cambiado a virtual
 }
